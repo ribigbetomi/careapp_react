@@ -1,12 +1,17 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import ServiceUsers from "./components/serviceUsers";
+import HomeScreen from "./screens/HomeScreen";
+import ServiceUserScreen from "./screens/serviceUserScreen";
 
 function App() {
   return (
-    <div className="App">
-      <ServiceUsers />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" component={HomeScreen} exact />
+        <Route path="/serviceuserscreen/:id" component={ServiceUserScreen} />
+      </Switch>
+    </Router>
   );
 }
 
