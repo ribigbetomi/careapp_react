@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import ServiceUserBox from "./serviceUserBox";
+import UserBox from "./userBox";
 
 export default function ServiceUsers() {
   const [serviceUsers, setServiceUsers] = useState([]);
@@ -35,7 +35,7 @@ export default function ServiceUsers() {
       {serviceUsers ? (
         <>
           {serviceUsers.map((user, i) => (
-            <ServiceUserBox key={i} serviceUser={user} />
+            <UserBox key={i} serviceUser={user} />
           ))}
         </>
       ) : (
