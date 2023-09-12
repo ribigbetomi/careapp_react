@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 const UserBox = ({ serviceUser = {}, careWorker = {} }) => {
   console.log(serviceUser, "sUUU");
@@ -22,7 +22,7 @@ const UserBox = ({ serviceUser = {}, careWorker = {} }) => {
       )}
       {careWorker && (
         <>
-          <Link to={`/careworkerscreen/${careWorker._id}`}>
+          <Link to={`/careworkerscreen/${careWorker.userID}`}>
             {/* <div onClick={go}> */}
             <div>{careWorker.name} </div>
             <div>{careWorker.email} </div>

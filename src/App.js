@@ -2,7 +2,7 @@ import "./App.css";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import ServiceUsers from "./components/serviceUsers";
 import HomeScreen from "./screens/HomeScreen";
-import ServiceUserScreen from "./screens/serviceUserScreen";
+import ServiceUserScreen from "./screens/ServiceUserScreen";
 
 function App() {
   return (
