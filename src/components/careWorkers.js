@@ -33,7 +33,7 @@ export default function CareWorkers() {
   };
   return (
     <div>
-      <div>Service Users</div>
+      <div>CareWorkers</div>
       {/* <div> */}
       {careWorkers ? (
         <>

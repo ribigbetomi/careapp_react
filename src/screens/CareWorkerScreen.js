@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function CareWorkerScreen({ match }) {
-  const careWorkerUserId = match.params.id;
+  const careWorkerUserId = match.params.userid;
   console.log(careWorkerUserId, "suID");
   const [careWorker, setCareWorker] = useState({});
   console.log(careWorker, "cW");
