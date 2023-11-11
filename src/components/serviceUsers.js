@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import UserBox from "./userBox";
+import { Link } from "react-router-dom";
 
 export default function ServiceUsers() {
   const [serviceUsers, setServiceUsers] = useState([]);
@@ -35,7 +36,9 @@ export default function ServiceUsers() {
       {serviceUsers ? (
         <>
           {serviceUsers.map((user, i) => (
-            <UserBox key={i} serviceUser={user} />
+            <Link to={`/serviceuserscreen/${user._id}`}>
+              <UserBox key={i} serviceUser={user} />
+            </Link>
           ))}
         </>
       ) : (

@@ -1,7 +1,7 @@
 import React from "react";
 
 import UserBox from "./userBox";
-import { axios } from "axios";
+import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -9,13 +9,13 @@ export default function CareWorkers() {
   const [careWorkers, setCareWorkers] = useState([]);
   console.log(careWorkers, "sU");
 
-  useEffect(() => {
-    async function getCareWorkers() {
-      const { data } = await axios.get("http://localhost:5000/api/careWorker");
-      setCareWorkers(data);
-    }
-    getCareWorkers();
-  }, []);
+  // useEffect(() => {
+  //   async function getCareWorkers() {
+  //     const { data } = await axios.get("http://localhost:5000/api/careWorker");
+  //     setCareWorkers(data);
+  //   }
+  //   getCareWorkers();
+  // }, []);
 
   const createNewCareWorker = async () => {
     const config = {

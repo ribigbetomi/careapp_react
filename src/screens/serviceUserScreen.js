@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
-export default function ServiceUserScreen({ match }) {
-  const serviceUserId = match.params.id;
+export default function ServiceUserScreen() {
+  let params = useParams();
+  const serviceUserId = params.id;
   console.log(serviceUserId, "suID");
   const [serviceUser, setServiceUser] = useState({});
   console.log(serviceUser, "suser");
